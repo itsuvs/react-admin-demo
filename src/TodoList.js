@@ -1,8 +1,9 @@
-import { BooleanField, Datagrid, List, ReferenceField, TextField, EditButton } from 'react-admin';
-import { CustomCompleted } from './CustomCompleted';
+import { BooleanField, Datagrid, List, ReferenceField, TextField, EditButton } from 'react-admin'
+import { CustomCompleted } from './CustomCompleted'
+import { ToDoFilters } from './ToDoFilters'
 
 export const TodoList = () => (
-    <List>
+    <List filters={ToDoFilters}>
         <Datagrid rowClick="edit">
             <TextField source="id" />
             <ReferenceField source="userId" reference="users">
